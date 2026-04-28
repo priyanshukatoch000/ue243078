@@ -1,3 +1,4 @@
+// Duplicate Detection: Detects duplicate elements in a list/array. Time Complexity: O(n) with hashing.
 #include <bits/stdc++.h>
 using namespace std;
 

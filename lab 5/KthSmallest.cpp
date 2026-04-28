@@ -1,3 +1,4 @@
+// K-th Smallest: Finds k-th smallest element using selection strategy. Time Complexity: O(n) average with quickselect.
 #include <bits/stdc++.h>
 using namespace std;
 

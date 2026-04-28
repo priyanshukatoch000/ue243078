@@ -1,3 +1,4 @@
+// Power x^n: Computes x raised to n using fast exponentiation. Time Complexity: O(log n).
 #include <bits/stdc++.h>
 using namespace std;
 

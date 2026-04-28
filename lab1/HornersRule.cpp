@@ -1,3 +1,4 @@
+// Horner's Rule: Evaluates a polynomial efficiently using nested multiplication. Time Complexity: O(n).
 #include <bits/stdc++.h>
 using namespace std;
 

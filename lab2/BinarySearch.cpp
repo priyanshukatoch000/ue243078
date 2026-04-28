@@ -1,3 +1,4 @@
+// Binary Search: Finds an element in sorted data by halving search space. Time Complexity: O(log n).
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,4 @@
+// Kruskal's Algorithm: Builds minimum spanning tree via sorted edges and DSU. Time Complexity: O(E log E).
 #include <bits/stdc++.h>
 using namespace std;
 

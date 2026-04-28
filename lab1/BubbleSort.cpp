@@ -1,3 +1,4 @@
+// Bubble Sort: Sorts elements by repeatedly swapping adjacent out-of-order pairs. Time Complexity: O(n^2) average/worst, O(n) best.
 #include <bits/stdc++.h>
 using namespace std;
 

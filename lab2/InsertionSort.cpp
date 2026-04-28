@@ -1,3 +1,4 @@
+// Insertion Sort: Builds a sorted array one element at a time. Time Complexity: O(n^2) average/worst, O(n) best.
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,4 @@
+// Consecutive Element Check: Checks whether array elements form a consecutive sequence. Time Complexity: O(n log n) with sorting.
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,4 @@
+// Merge Sort: Divides array, sorts halves, and merges them. Time Complexity: O(n log n).
 #include <bits/stdc++.h>
 using namespace std;
 

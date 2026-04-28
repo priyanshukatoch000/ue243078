@@ -1,3 +1,4 @@
+// Quick Sort: Sorts by partitioning around a pivot recursively. Time Complexity: O(n log n) average, O(n^2) worst.
 #include <bits/stdc++.h>
 using namespace std;
 

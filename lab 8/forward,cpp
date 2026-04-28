@@ -1,0 +1,96 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+const int INF = 10000000;
+vector<set<int>> s;
+
+void findStage(vector<vector<int>> &g) {
+    s.clear();
+    int n = g.size();
+    vector<bool> visited(n, false);
+
+    set<int> t;
+    t.insert(0);
+    visited[0] = true;
+    s.push_back(t);
+
+    int i = 0;
+
+    while (i < s.size()) {
+        set<int> st;
+        for (int e : s[i]) {
+            for (int j = 0; j < n; j++) {
+                if (g[e][j] != 0 && g[e][j] != INF && !visited[j]) {
+                    st.insert(j);
+                    visited[j] = true;
+                }
+            }
+        }
+        if (!st.empty()) s.push_back(st);
+        i++;
+    }
+}
+
+void bGraph(vector<vector<int>> &graph) {
+    findStage(graph);
+
+    int n = graph.size();
+    int stages = s.size();
+
+    vector<int> cost(n, INF);
+    vector<int> parent(n, -1);
+
+    cost[0] = 0;
+
+    for (int i = 0; i < stages - 1; i++) {
+        vector<int> curr(s[i].begin(), s[i].end());
+        vector<int> next(s[i + 1].begin(), s[i + 1].end());
+
+        for (int u : curr) {
+            for (int v : next) {
+                if (graph[u][v] != INF) {
+                    if (cost[v] > cost[u] + graph[u][v]) {
+                        cost[v] = cost[u] + graph[u][v];
+                        parent[v] = u;
+                    }
+                }
+            }
+        }
+    }
+
+
+    vector<int> path(stages);
+    int idx = stages - 1;
+    int curr = n - 1;
+
+    while (idx >= 0) {
+        path[idx--] = curr;
+        curr = parent[curr];
+    }
+
+    cout << "Minimum cost: " << cost[n - 1] << endl;
+    cout << "Path: ";
+    for (int i = 0; i < stages; i++) {
+        cout << path[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    vector<vector<int>> graph = {
+        {0,   2,   1,   3, INF, INF, INF, INF, INF, INF, INF},
+        {INF, 0, INF, INF,   2,   3, INF, INF, INF, INF, INF},
+        {INF, INF, 0, INF,   2,   1,   4, INF, INF, INF, INF},
+        {INF, INF, INF, 0, INF,   2,   3, INF, INF, INF, INF},
+        {INF, INF, INF, INF, 0, INF, INF,   3,   2, INF, INF},
+        {INF, INF, INF, INF, INF, 0, INF,   2,   3,   1, INF},
+        {INF, INF, INF, INF, INF, INF, 0, INF,   2,   3, INF},
+        {INF, INF, INF, INF, INF, INF, INF, 0, INF, INF,   2},
+        {INF, INF, INF, INF, INF, INF, INF, INF, 0, INF,   1},
+        {INF, INF, INF, INF, INF, INF, INF, INF, INF, 0,   3},
+        {INF, INF, INF, INF, INF, INF, INF, INF, INF, INF, 0}
+    };
+
+    bGraph(graph);
+    return 0;
+}

@@ -1,3 +1,4 @@
+// Max and Min: Finds maximum and minimum elements efficiently. Time Complexity: O(n).
 #include <bits/stdc++.h>
 using namespace std;
 

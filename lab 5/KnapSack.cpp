@@ -1,3 +1,4 @@
+// 0/1 Knapsack: Maximizes value under capacity using dynamic programming. Time Complexity: O(nW).
 #include <bits/stdc++.h>
 using namespace std;
 

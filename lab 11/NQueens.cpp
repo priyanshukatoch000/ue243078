@@ -1,3 +1,4 @@
+// N-Queens: Places N queens with no attacks. Time Complexity: Exponential (backtracking).
 #include <bits/stdc++.h>
 using namespace std;
 

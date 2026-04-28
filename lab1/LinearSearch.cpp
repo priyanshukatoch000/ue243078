@@ -1,3 +1,4 @@
+// Linear Search: Finds a target by sequentially scanning elements. Time Complexity: O(n).
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,4 @@
+// Selection Sort: Sorts by repeatedly selecting the minimum element. Time Complexity: O(n^2).
 #include <bits/stdc++.h>
 using namespace std;
 
