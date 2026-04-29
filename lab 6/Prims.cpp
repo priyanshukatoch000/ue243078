@@ -15,13 +15,12 @@ int prims(vector<vector<int>> &cost, int n) {
         for (int j = i; j < n; j++) {
             if (cost[i][j] < mn) {
                 mn = cost[i][j];
-                +
                 k = i;
                 l = j;
             }
         }
     }
-""
+
     t[0][0] = k;
     t[0][1] = l;
     mincost = cost[k][l];
